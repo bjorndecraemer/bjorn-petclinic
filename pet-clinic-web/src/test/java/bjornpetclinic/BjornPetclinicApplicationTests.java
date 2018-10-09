@@ -1,4 +1,4 @@
-package com.springframework.bjornpetclinic;
+package bjornpetclinic;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
