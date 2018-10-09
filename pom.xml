@@ -4,7 +4,7 @@
 
     <groupId>com.springframework</groupId>
     <artifactId>bjorn-petclinic</artifactId>
-    <version>0.0.1</version>
+    <version>0.0.1-SNAPSHOT</version>
     <modules>
         <module>pet-clinic-data</module>
         <module>pet-clinic-web</module>
