@@ -43,7 +43,7 @@
         </plugins>
     </build>
     <scm>
-        <developerConnection>scm:git:git@github.com:https://github.com/bjorndecraemer/bjorn-petclinic.git</developerConnection>
+        <developerConnection>scm:git:https://github.com/bjorndecraemer/bjorn-petclinic.git</developerConnection>
       <tag>bjorn-petclinic-0.0.1</tag>
   </scm>
 
