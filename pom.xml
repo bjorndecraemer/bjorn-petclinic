@@ -4,7 +4,7 @@
 
     <groupId>com.springframework</groupId>
     <artifactId>bjorn-petclinic</artifactId>
-    <version>0.0.2-SNAPSHOT</version>
+    <version>0.0.2</version>
     <modules>
         <module>pet-clinic-data</module>
         <module>pet-clinic-web</module>
@@ -45,7 +45,7 @@
     </build>
     <scm>
         <developerConnection>scm:git:https://github.com/bjorndecraemer/bjorn-petclinic.git</developerConnection>
-      <tag>bjorn-petclinic-0.0.1</tag>
+      <tag>bjorn-petclinic-0.0.2</tag>
   </scm>
 
 </project>
