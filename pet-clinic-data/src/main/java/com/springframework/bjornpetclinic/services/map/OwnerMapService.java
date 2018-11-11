@@ -8,7 +8,9 @@ import com.springframework.bjornpetclinic.services.PetTypeService;
 import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 import java.util.Set;
+import java.util.stream.Collectors;
 
 @Service
 @Profile({"default","map"})
@@ -76,5 +78,14 @@ public class OwnerMapService extends AbstractMapService<Owner, Long> implements 
                 .filter(owner -> owner.getLastName().equalsIgnoreCase(lastName))
                 .findFirst()
                 .orElse(null);
+    }
+
+    @Override
+    public List<Owner> findAllByLastNameLike(String lastName) {
+        return this
+                .findAll()
+                .stream()
+                .filter(owner -> owner.getLastName().matches(".*"+lastName+".*"))
+                .collect(Collectors.toList());
     }
 }
