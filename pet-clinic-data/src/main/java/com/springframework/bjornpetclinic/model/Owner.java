@@ -19,7 +19,12 @@ public class Owner extends Person{
     @Builder
     public Owner(Long id, String firstName, String lastName, Set<Pet> pets, String address, String city, String telephone) {
         super(id, firstName, lastName);
-        this.pets = pets;
+        if(pets != null) {
+            this.pets = pets;
+        }
+        else{
+            this.pets = new HashSet<>();
+        }
         this.address = address;
         this.city = city;
         this.telephone = telephone;
@@ -33,4 +38,19 @@ public class Owner extends Person{
     private String city;
     @Column(name = "telephone")
     private String telephone;
+
+    public Pet getPet(String name){
+        return getPet(name,false);
+    }
+
+    public Pet getPet(String name, boolean ignoreNew){
+        for (Pet pet : pets) {
+            if(!ignoreNew || !pet.isNew()){
+                if(pet.getName().equalsIgnoreCase(name)){
+                    return pet;
+                }
+            }
+        }
+        return null;
+    }
 }
